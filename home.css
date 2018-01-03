@@ -1,0 +1,70 @@
+html,
+* {
+  margin: 0;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: normal;
+  color: #333; }
+/*
+===================================
+	Social Icons
+===================================
+*/
+.social-icon {
+	position: relative;
+	display: inline-block;
+	margin: 25px;
+	width: 64px;
+	height: 64px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	font-size: 2em; }
+	.social-icon > i {
+	  transition: 0.2s ease-out; }
+	.social-icon:hover > i {
+	  transition: 0.2s ease-out; }
+	.social-icon:hover .fa-twitter {
+	  color: #1da1f2; }
+	.social-icon:hover .fa-youtube-play {
+	  color: #ff0000; }
+	.social-icon:hover .fa-tumblr {
+	  color: #35465c; }
+	.social-icon i {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%); }
+  
+  /*
+  =================
+	Buttons
+  =================
+  */
+  button {
+	border-style: none;
+	background: none;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 6.25px 12.5px;
+	margin-top: 25px;
+	border-radius: 2px;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.1s 0.01s ease-out; }
+	button.dark {
+	  border: 2px solid #333;
+	  color: #333; }
+	  button.dark:hover {
+		background-color: #333;
+		color: white; }
+	button.primary {
+	  border: 2px solid teal;
+	  color: teal; }
+	  button.primary:hover {
+		background-color: teal;
+		color: white; }
+	button:hover {
+	  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+	  transition: 0.1s 0.01s ease-out; }
+	button.link:hover {
+	  cursor: pointer; }
+	a button:hover {
+	  cursor: pointer; }
