@@ -3,13 +3,25 @@ var portfolioBtn = document.getElementById('portfolio-btn');
 var contentBox = document.getElementById('content-box');
 
 $('body').on('click', '#contact-btn', function() {
-	$( "#content-box" ).load( "public/views/contact.html");
+	loadPage('contact');
 });
 
 $('body').on('click','#home-btn',function() {
-	$( "#content-box" ).load( "public/views/home.html");
+	loadPage('home');
 });
 
 $('body').on('click','#portfolio-btn',function() {
-	$( "#content-box" ).load( "public/views/portfolio.html");
+	loadPage('portfolio');
 });
+
+function loadPage(page){
+	contentBox.classList.add('new-page');
+	setTimeout(function(){
+		$('#content-box').load('public/views/'+page+'.html');
+
+		setTimeout(function(){
+			contentBox.classList.remove('new-page');
+		}, 300);
+
+	}, 300);
+}
