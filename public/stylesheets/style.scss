@@ -35,13 +35,13 @@ html,
 	font-weight: normal;
 	color: $text-dark;
 }
-object{
-	width:100%;
-	height:100%;
+object {
+	width: 100%;
+	height: 100%;
 }
-html#main{
-	width:100vw;
-	height:100vh;
+html#main {
+	width: 100vw;
+	height: 100vh;
 }
 /*
 ===================================
@@ -63,9 +63,11 @@ html#main{
 }
 
 div#content-box {
-	min-height:50%;
+	min-height: 50%;
 	// max-height:80%;
+
 	width: 500px;
+	// max-width:90vw;
 	padding: $padding;
 	text-align: center;
 
@@ -168,10 +170,75 @@ button {
 		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
 		transition: 0.1s 0.01s ease-out;
 	}
-	&.link:hover{
+	&.link:hover {
 		cursor: pointer;
 	}
 	a &:hover {
 		cursor: pointer;
+	}
+}
+
+/*
+===================================
+	Links
+===================================
+*/
+a {
+	text-decoration: none;
+	color: $primary;
+
+	&:not(.social-icon) {
+		&:hover {
+			// border-bottom: 1px solid $primary;
+			text-decoration: underline;
+		}
+
+		i {
+			text-decoration: none;
+			color: $primary;
+		}
+	}
+}
+
+/*
+===================================
+	Contact Information
+===================================
+*/
+ul.contact-information {
+	width: 75%;
+	margin: 0 auto;
+	margin-top: $padding;
+	list-style: none;
+
+	li {
+		margin-bottom: $padding;
+
+		font-size: 1.2em;
+		font-weight: bold;
+
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+
+		i {
+			font-size: 1.6em;
+			width:1.6em;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	div#content-box {
+		width: 75vw;
+	}
+	.social-icon {
+		width: 1.5em;
+		height: 1.5em;
+
+		margin: 0.5em 10px;
+
+		font-size: 2em;
 	}
 }

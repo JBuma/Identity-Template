@@ -2,18 +2,14 @@ var contactBtn = document.getElementById('contact-btn');
 var portfolioBtn = document.getElementById('portfolio-btn');
 var contentBox = document.getElementById('content-box');
 
-// contactBtn.addEventListener('click', () => {
-// 	getPage('contact');
-// });
-// portfolioBtn.addEventListener('click', () => {
-// 	getPage('portfolio');
-// });
-
-$('#contact-btn').click(function() {
-	// alert('clicko')
-	$( "#content-box" ).load( "contact.html");
+$('body').on('click', '#contact-btn', function() {
+	$( "#content-box" ).load( "public/views/contact.html");
 });
 
-function getPage(page) {
-	contentBox.innerHTML = '<object type="text/html" data="home.html" ></object>';
-}
+$('body').on('click','#home-btn',function() {
+	$( "#content-box" ).load( "public/views/home.html");
+});
+
+$('body').on('click','#portfolio-btn',function() {
+	$( "#content-box" ).load( "public/views/portfolio.html");
+});

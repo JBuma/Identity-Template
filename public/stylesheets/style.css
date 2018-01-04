@@ -127,4 +127,50 @@ button {
   a button:hover {
     cursor: pointer; }
 
+/*
+===================================
+	Links
+===================================
+*/
+a {
+  text-decoration: none;
+  color: teal; }
+  a:not(.social-icon):hover {
+    text-decoration: underline; }
+  a:not(.social-icon) i {
+    text-decoration: none;
+    color: teal; }
+
+/*
+===================================
+	Contact Information
+===================================
+*/
+ul.contact-information {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 25px;
+  list-style: none; }
+  ul.contact-information li {
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    ul.contact-information li i {
+      font-size: 1.6em;
+      width: 1.6em; }
+
+@media screen and (max-width: 550px) {
+  div#content-box {
+    width: 75vw; }
+
+  .social-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.5em 10px;
+    font-size: 2em; } }
+
 /*# sourceMappingURL=style.css.map */
